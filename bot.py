@@ -27,7 +27,7 @@ async def start(event):
   await event.reply("** Mən bütün userləri tag etməyə hazıram **\ \n əmrləri görmək üçün =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/StrongTaggerBot?startgroup=a")],
+		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/DecuTaggerbot?startgroup=a")],
                       [Button.url('Support 🛠', 'https://t.me/StrongBotsChat')],
                       [Button.url('Rəsmi Kanal 🐉', 'https://t.me/Strong_Bots')],
 		      [Button.url('Owner 👨🏻‍💻', 'https://t.me/ozudugagas')],
