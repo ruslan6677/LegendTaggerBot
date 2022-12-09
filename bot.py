@@ -28,33 +28,33 @@ async def start(event):
                     buttons=(
                    
 		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/DecuTaggerbot?startgroup=a")],
-                      [Button.url('Support 🛠', 'https://t.me/StrongBotsChat')],
-                      [Button.url('Rəsmi Kanal 🐉', 'https://t.me/Strong_Bots')],
-		      [Button.url('Owner 👨🏻‍💻', 'https://t.me/ozudugagas')],
-                      [Button.url('innovating ⚡️', 'https://t.me/ozudugagas')],
+                      [Button.url('Oyun Qurubu 👨‍💻', 'https://t.me/TheBorzMaf')],
+                      [Button.url('Söhbət Qurubu 💬', 'https://t.me/TheBorzSohbet')],
+		      [Button.url('Owner 👨🏻‍💻', 'https://t.me/ordayam_5_deqiqeye')],
+                      [Button.url('Yeniliklerr', 'https://t.me/TheBorzMaf')],
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "** Legend ⚡️ Tagger əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başladar**"
+  helptext = "** DECU ⚡️ Tagger əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başladar**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et', "https://t.me/StrongTaggerBot?startgroup=a")],
-                      [Button.url('Support🛠', 'https://t.me/StrongBotsChat')],
-                      [Button.url('Rəsmi Kanal', 'https://t.me/StrongBots')],
-		      [Button.url('Owner 👨🏻‍💻', 'https://t.me/ozudugagas')],
-                      [Button.url('innovating ⚡️', 'https://t.me/ozudugagas')],
+                      [Button.url('Məni qrupa əlavə et', "https://t.me/DecuTaggerbot?startgroup=a")],
+                      [Button.url('Oyun Qurubu 👨‍💻', 'https://t.me/TheBorzMaf')],
+                      [Button.url('Söhbət Qurubu 💬', 'https://t.me/TheBorzSohbet')],
+		      [Button.url('Owner 👨🏻‍💻', 'https://t.me/ordayam_5_deqiqeye')],
+                      [Button.url('Yenilikler ⚡️', 'https://t.me/TheBorzMaf')],
                     ),
                     link_preview=False
                    )
 	
 @client.on(events.NewMessage(pattern="^/reklam"))
 async def help(event):
-  helptext = "** @StrongTaggerBot ilə qrupunuzdakı userləri daha asan tag edə bilərsiniz\n daha ətraflı məlumat üçün @ozudugagas ! **"
+  helptext = "** @DecuTaggerbot ilə qrupunuzdakı userləri daha asan tag edə bilərsiniz\n daha ətraflı məlumat üçün @ordayam_5_deqiqeye ! **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et ➕', 'https://t.me/StrongTaggerBot?startgroup=a')],
+                      [Button.url('Məni qrupa əlavə et ➕', 'https://t.me/DecuTaggerbot?startgroup=a')],
                     ),
                     link_preview=False
                    )
@@ -121,7 +121,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @Strong_Bots**")
+        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @DecuTaggerbot**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -234,7 +234,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Buda sizin reklamınız ola bilər @StrongBots**")
+        await event.respond("Modul dayandırıldı.\n\n**Buda sizin reklamınız ola bilər @DecuTaggerbot**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -252,7 +252,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Modul dəyandırıldı.\n\n**Burada sizin reklamınız ola bilər @StrongBots**")
+        await event.respond("Modul dəyandırıldı.\n\n**Burada sizin reklamınız ola bilər @DecuTagger**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -286,5 +286,5 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-print("==> StrongTaggerBot online..!\n==> Owner @ozudugagas\n==> Editor @ozudugagas")
+print("==> DecuTaggerBot online..!\n==> Owner @ordayam_5_deqiqeye\n==> Editor @ordayam_5_deqiqeye")
 client.run_until_disconnected()
