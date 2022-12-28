@@ -52,6 +52,7 @@ async def help(event):
                     ),
                     link_preview=False
                    )
+
 	
 @client.on(events.NewMessage(pattern="^/reklam"))
 async def help(event):
@@ -62,6 +63,13 @@ async def help(event):
                     ),
                     link_preview=False
                    )
+@client.on(events.NewMessage(pattern="^/help$"))
+async def help(event):
+  if event.is_private:
+    async for usr in client.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
+     return await event.reply(f"{ad} {startmesaj}",
 	
 	
 
