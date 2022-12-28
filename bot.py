@@ -24,12 +24,11 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("** Mən bütün userləri tag etməyə hazıram **\ \n əmrləri görmək üçün =======> /help yazın**",
-      if event.is_private:
-    	async for usr in Leyla.iter_participants(event.chat_id):
-    		ad = f"[{user.first_name}](tg://user?id={user_id}) "
-    		await Client.send_message(LOG_GROUP, f"i** Yeni Istifadeci - **{ad}")
-    		return await Leyla.send_message(event.chat_id, f"{ad} {startmesaj}")
+  if event.is_private:
+    async for usr in client.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
+     return await event.reply(f"{ad} {startmesaj}",
                     buttons=(
                    
 		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/DecuTaggerbot?startgroup=a")],
