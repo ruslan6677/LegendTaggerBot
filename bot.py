@@ -28,7 +28,7 @@ async def start(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
-     return await event.reply(f"{ad} {startmesaj}",
+     return await event.reply("salam Petux",
                     buttons=(
                    
 		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/DecuTaggerbot?startgroup=a")],
@@ -69,7 +69,7 @@ async def help(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
-     return await event.reply(f"{ad} {startmesaj}",
+     return await event.reply("salam gijdillax",
 	
 	
 
