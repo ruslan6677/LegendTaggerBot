@@ -25,8 +25,8 @@ tekli_calisan = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply("** Mən bütün userləri tag etməyə hazıram **\ \n əmrləri görmək üçün =======> /help yazın**",
-  if event.is_private:
-    	async for user in Leyla.iter_participants(event.chat_id):
+        if event.is_private:
+    	async for usr in Leyla.iter_participants(event.chat_id):
     		ad = f"[{user.first_name}](tg://user?id={user_id}) "
     		await Client.send_message(LOG_GROUP, f"i** Yeni Istifadeci - **{ad}")
     		return await Leyla.send_message(event.chat_id, f"{ad} {startmesaj}")
