@@ -23,7 +23,7 @@ silah = ("M16A4","M416","AKM","G36C","Qroza","QBZ","M762","Mk47","UMP45","Vektor
 
 şəhər = ("Zharki","Georgepol","ShottingRange","Hospital","Gatka","Pochinki","Severny","Ruins","YasnayaPolyana","Stalber","Quary","Primorsk","Kameshki","Rozhok","School","Farm","Shelter","Manison","Prison","Lipovka","FerryPier","Sosnovka","Military","Base","Novorepnoye","Mylta","MyltaPower","Wengen","Gass","LupinFelt","Blomster","Gronhus","HotSpring","RoseFarm","İceborg","Eastport","Fiskerhus","Midtstein","Crabgrass","Helle","Reeds","Watterfall","ShipYard","LumberYard","Aqueduct","Ystad","Holdhus","PowerPlant","Bootcamp","ParadiseResort","Miramar","Erangel","Livik","Sanhok","Wikendi")
 
-# Silah adları ile Tağ 
+# Silah adlarhhı ile Tağ 
 @brend(outgoing=True, pattern="^.otag.*")
 async def pubgtag(event):
       if event.fwd_from or FlagContainer.is_active:
