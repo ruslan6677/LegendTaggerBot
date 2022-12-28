@@ -38,20 +38,7 @@ async def start(event):
                       [Button.url('Yeniliklerr', 'https://t.me/TheBorzMaf')],
                     ),
                     link_preview=False
-                   )
-@client.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-  helptext = "** DECU ⚡️ Tagger əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başladar**"
-  await event.reply(helptext,
-                    buttons=(
-                      [Button.url('Məni qrupa əlavə et', "https://t.me/DecuTaggerbot?startgroup=a")],
-                      [Button.url('Oyun Qurubu 👨‍💻', 'https://t.me/TheBorzMaf')],
-                      [Button.url('Söhbət Qurubu 💬', 'https://t.me/TheBorzSohbet')],
-		      [Button.url('Owner 👨🏻‍💻', 'https://t.me/ordayam_5_deqiqeye')],
-                      [Button.url('Yenilikler ⚡️', 'https://t.me/TheBorzMaf')],
-                    ),
-                    link_preview=False
-                   )
+
 
 	
 @client.on(events.NewMessage(pattern="^/reklam"))
@@ -69,8 +56,7 @@ async def help(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
-     return await event.reply("salam gijdillax",
-	
+     return await event.reply("salam gijdillax",	
 	
 
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
